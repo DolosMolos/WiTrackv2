@@ -41,24 +41,23 @@ This project transforms an **ESP32 Lolin32 Lite** microcontroller into an intell
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/esp32-crowd-detection.git
-cd esp32-crowd-detection
+git clone https://github.com/DolosMolos/WiTrackv2
 
 # 2. Install Python dependencies
 pip install -r requirements.txt
 
 # 3. Upload ESP32 firmware
 # → Open Arduino IDE
-# → Load: ESP32-SoftAP-Fixed.ino
+# → Load: ESP32-SoftAP.ino
 # → Select Board: ESP32 Dev Module
 # → Select Partition: Huge APP (3MB)
 # → Upload
 
 # 4. Run the dashboard
-python softap_analytics_fixed.py
+python softap_analytics.py
 
 # 5. For web dashboard (optional)
-python web_dashboard_fixed.py
+python webdashboard.py
 # → Open http://localhost:8050 in browser
 ```
 
@@ -121,13 +120,13 @@ python web_dashboard_fixed.py
 │  ┌─────────────────────────────────────────────────────┐  │
 │  │  Python Dashboard (Your Laptop)                      │  │
 │  │                                                     │  │
-│  │  ├─ softap_analytics_fixed.py (Matplotlib)         │  │
+│  │  ├─ softap_analytics.py (Matplotlib)         │  │
 │  │  │  └─ Real-time monitoring                        │  │
 │  │  │                                                  │  │
-│  │  ├─ web_dashboard_fixed.py (Plotly Dash)          │  │
+│  │  ├─ webdashboard.py (Plotly Dash)          │  │
 │  │  │  └─ Web browser + Mobile access                 │  │
 │  │  │                                                  │  │
-│  │  └─ advanced_analytics.py (ML Analytics)           │  │
+│  │  └─ advanced_analysis.py (ML Analytics)           │  │
 │  │     └─ Reports & Forecasting                       │  │
 │  │                                                     │  │
 │  │  📊 Auto-saves CSV data                            │  │
@@ -180,7 +179,7 @@ python web_dashboard_fixed.py
 Arduino IDE:
 1. Tools → Board → ESP32 Dev Module
 2. Tools → Partition Scheme → Huge APP (3MB)
-3. Upload ESP32-SoftAP-Fixed.ino
+3. Upload ESP32-SoftAP.ino
 ```
 
 ### Step 3: Run Desktop Dashboard
@@ -188,10 +187,10 @@ Arduino IDE:
 # Close Arduino Serial Monitor first!
 
 # Option A: Matplotlib Dashboard (Recommended for production)
-python softap_analytics_fixed.py
+python softap_analytics.py
 
 # Option B: Web Dashboard (Recommended for multiple viewers)
-python web_dashboard_fixed.py
+python webdashboard.py
 # Open: http://localhost:8050
 ```
 
@@ -246,7 +245,7 @@ const int AP_CHANNEL = 6;                  // WiFi channel
 
 ### Python Dashboard Settings
 ```python
-# In softap_analytics_fixed.py
+# In softap_analytics.py
 COM_PORT = 'COM3'              # Change to your port (COM1-9 on Windows, /dev/ttyUSB0 on Linux)
 BAUD_RATE = 115200             # Must match ESP32
 MAX_DATA_POINTS = 120          # Show last 120 data points
@@ -255,7 +254,7 @@ UPDATE_INTERVAL = 15000        # Update statistics every 15 seconds
 
 ### Web Dashboard Settings
 ```python
-# In web_dashboard_fixed.py
+# In webdashboard.py
 app.run(debug=False, host='0.0.0.0', port=8050)
 # Change port=8050 to any free port if needed
 ```
@@ -474,15 +473,6 @@ Required: Include the license and copyright notice.
 - **WiFi Security:** https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access
 
 ---
-
-## 📞 Support & Community
-
-### Getting Help
-1. Check [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-2. Review [API_REFERENCE.md](API_REFERENCE.md)
-3. Search existing issues on GitHub
-4. Open a new issue with details
-
 ### Report a Bug
 ```
 Please include:
@@ -538,18 +528,7 @@ Describe:
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.github.com/repos/yourusername/esp32-crowd-detection/stargazers?per_page=1)](https://github.com/yourusername/esp32-crowd-detection)
-
 If you found this project useful, please ⭐ star it on GitHub!
-
----
-
-## 📞 Contact & Social
-
-- 📧 Email: contact@example.com
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
-- 🎬 YouTube: [Tutorial Channel](#)
-- 🐦 Twitter: [@yourhandle](#)
 
 ---
 
@@ -562,22 +541,9 @@ If you found this project useful, please ⭐ star it on GitHub!
 ║                                            ║
 ║  Questions? Issues? Ideas?                ║
 ║  Open an issue on GitHub →                ║
-║  github.com/yourusername/esp32-crowd-det  ║
+║  https://github.com/DolosMolos/WiTrackv2  ║
 ╚════════════════════════════════════════════╝
 ```
-
----
-
-## 🎯 Quick Links
-
-| Resource | Link |
-|----------|------|
-| **GitHub Repo** | [View on GitHub](#) |
-| **Issues** | [Report an Issue](#) |
-| **Discussions** | [Join Discussion](#) |
-| **Documentation** | [Read Full Docs](#) |
-| **Roadmap** | [View Roadmap](#) |
-| **Releases** | [Latest Release](#) |
 
 ---
 
