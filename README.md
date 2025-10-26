@@ -64,40 +64,6 @@ python web_dashboard_fixed.py
 
 ---
 
-## 📋 Project Structure
-
-```
-esp32-crowd-detection/
-├── README.md                          # This file
-├── requirements.txt                   # Python dependencies
-├── LICENSE                            # MIT License
-│
-├── 📱 ESP32 Firmware/
-│   ├── ESP32-SoftAP-Fixed.ino        # Main ESP32 code (Soft AP honeypot)
-│   ├── ESP32-WiFi-Only.ino           # Alternative (WiFi only, lightweight)
-│   └── README_ESP32.md               # Hardware setup guide
-│
-├── 🖥️ Desktop Dashboards/
-│   ├── softap_analytics_fixed.py     # Main matplotlib dashboard (Real-time)
-│   ├── web_dashboard_fixed.py        # Web dashboard (Plotly Dash)
-│   ├── test_serial_connection.py     # Serial connection debugger
-│   └── README_DASHBOARDS.md          # Dashboard user guide
-│
-├── 📊 Analytics & Reporting/
-│   ├── advanced_analytics.py         # Deep analytics & ML forecasting
-│   └── README_ANALYTICS.md           # Analytics guide
-│
-├── 📚 Documentation/
-│   ├── HARDWARE_SETUP.md             # Detailed hardware guide
-│   ├── SOFTWARE_SETUP.md             # Detailed software guide
-│   ├── TROUBLESHOOTING.md            # Common issues & fixes
-│   └── API_REFERENCE.md              # Data format reference
-│
-└── 📦 Sample Data/
-    ├── sample_data.csv               # Example analytics data
-    └── example_reports/              # Sample generated reports
-```
-
 ---
 
 ## ✨ Key Features
